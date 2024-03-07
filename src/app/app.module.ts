@@ -17,6 +17,10 @@ import * as echarts from 'echarts';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { NgApexchartsModule } from 'ng-apexcharts';
 
+import { ChartModule } from 'angular-highcharts';
+import { HighchartsChartModule } from 'highcharts-angular';
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -33,7 +37,9 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     MatDividerModule,
     MatExpansionModule,
     NgxEchartsModule.forRoot({ echarts }),
-    NgApexchartsModule
+    NgApexchartsModule,
+    ChartModule,
+    HighchartsChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

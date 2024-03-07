@@ -24,8 +24,8 @@
           <mat-panel-title>
             Chart JS
           </mat-panel-title>
-
         </mat-expansion-panel-header>
+        <mat-divider></mat-divider>
         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
           <button mat-button color="primary" class="menu-button" routerLink="/chart-js/line-chart">
             Line chart
@@ -45,8 +45,8 @@
           <mat-panel-title>
             Apache Echarts
           </mat-panel-title>
-
         </mat-expansion-panel-header>
+        <mat-divider></mat-divider>
         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
           <button mat-button color="primary" class="menu-button" routerLink="/apache-echarts/line-chart">
             Line chart
@@ -68,8 +68,8 @@
           <mat-panel-title>
             ApexCharts
           </mat-panel-title>
-
         </mat-expansion-panel-header>
+        <mat-divider></mat-divider>
         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
           <button mat-button color="primary" class="menu-button" routerLink="/apex-charts/line-chart">
             Line chart
@@ -89,9 +89,44 @@
           <button mat-button color="primary" class="menu-button" routerLink="/apex-charts/multiple-y-axis-chart">
             Múltiple Y-Axis
           </button>
-          
+
         </div>
       </mat-expansion-panel>
+
+      <!-- Highcharts -->
+      <mat-expansion-panel expanded="true" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Highcharts
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+        <mat-divider></mat-divider>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <button mat-button color="primary" class="menu-button" routerLink="/high-charts/line-chart">
+            Line chart
+          </button>
+          <button mat-button color="primary" class="menu-button" routerLink="/high-charts/bar-chart">
+            Bar Chart
+          </button>
+          <!-- <button mat-button color="primary" class="menu-button" routerLink="/apex-charts/column-chart">
+            Column Chart
+          </button>
+          <button mat-button color="primary" class="menu-button" routerLink="/apex-charts/column-data-labels-chart">
+            Column Chary With Data Labels
+          </button>
+          <button mat-button color="primary" class="menu-button" routerLink="/apex-charts/pie-chart">
+            Pie Chart
+          </button>
+          <button mat-button color="primary" class="menu-button" routerLink="/apex-charts/multiple-y-axis-chart">
+            Múltiple Y-Axis
+          </button> -->
+
+        </div>
+      </mat-expansion-panel>
+
+
+      
 
     </mat-accordion>
 

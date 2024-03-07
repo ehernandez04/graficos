@@ -27,6 +27,12 @@ const routes: Routes = [
       m => m.ApexChartsModule
     ) 
   },
+  {
+    path: 'high-charts',
+    loadChildren: () =>  import('./high-charts/high-charts.module').then(
+      m => m.HighChartsModule
+    ) 
+  },
 ];
 
 @NgModule({
