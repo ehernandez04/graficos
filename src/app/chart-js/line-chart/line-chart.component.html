@@ -1,8 +1,11 @@
-<canvas id="lineChart">{{chart}}</canvas>
+<div  style="position: relative; height:50vh; width:80vw" >
 
-<br>
-<div style="display: flex; gap: 1rem;">
-    <button mat-raised-button (click)="addDataset()">Add Dataset</button>
+    <canvas id="lineChart">{{chart}}</canvas>
 
-    <button mat-raised-button (click)="removeDataset()">Remove Dataset</button>
+    <br>
+    <div style="display: flex; gap: 1rem;">
+        <button mat-raised-button (click)="addDataset()">Add Dataset</button>
+
+        <button mat-raised-button (click)="removeDataset()">Remove Dataset</button>
+    </div>
 </div>

@@ -7,18 +7,15 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
 const routes: Routes = [
   {
     path: 'bar-chart',
-    component: BarChartComponent,
-    pathMatch: 'full'
+    component: BarChartComponent
   },
   {
     path: 'line-chart',
-    component: LineChartComponent,
-    pathMatch: 'full'
+    component: LineChartComponent
   },
   {
     path: 'pie-chart',
-    component: PieChartComponent,
-    pathMatch: 'full'
+    component: PieChartComponent
   }
 ];
 

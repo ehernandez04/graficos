@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -14,6 +15,7 @@ import { NgxEchartsDirective, provideEcharts } from 'ngx-echarts';
 import { LineChartComponent } from './apache-echarts/line-chart/line-chart.component';
 import * as echarts from 'echarts';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { NgxEchartsModule } from 'ngx-echarts';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
@@ -29,7 +32,8 @@ import { NgxEchartsModule } from 'ngx-echarts';
     MatIconModule,
     MatDividerModule,
     MatExpansionModule,
-    NgxEchartsModule.forRoot({ echarts })
+    NgxEchartsModule.forRoot({ echarts }),
+    NgApexchartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

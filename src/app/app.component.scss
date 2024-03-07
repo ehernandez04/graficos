@@ -18,6 +18,12 @@ mat-sidenav{
     text-align: center;
 }
 
+mat-panel-title{
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
 .content{
     height: calc(100vh - 130px);
     margin: 16px;
@@ -44,6 +50,8 @@ mat-sidenav-container{
     align-items: center;
     justify-content: flex-start;
     font-size: 1rem;
+    text-align: left;
+    
     mat-icon{
         margin-right: 8px;
     }
