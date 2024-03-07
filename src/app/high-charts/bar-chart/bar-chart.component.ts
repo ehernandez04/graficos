@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { HighchartsGantt } from 'angular-highcharts';
 import * as Highcharts from 'highcharts';
-import * as exporting from 'highcharts/modules/exporting';
 
 @Component({
   selector: 'app-bar-chart',
@@ -9,50 +9,80 @@ import * as exporting from 'highcharts/modules/exporting';
 })
 export class BarChartComponent {
 
+  isHighcharts = typeof Highcharts === 'object';
+  
   // Asignar Highcharts a una variable
   Highcharts: typeof Highcharts = Highcharts;
 
-  // Definir las opciones del gráfico
   chartOptions: Highcharts.Options = {
-    title: {
-      text: 'Ventas mensuales'
-    },
-    xAxis: {
-      categories: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio']
-    },
-    yAxis: {
+    chart: {
+      type: 'bar'
+  },
+  title: {
+      text: 'Historic World Population by Region',
+      align: 'left'
+  },
+  subtitle: {
+      text: 'Source: <a ' +
+          'href="https://en.wikipedia.org/wiki/List_of_continents_and_continental_subregions_by_population"' +
+          'target="_blank">Wikipedia.org</a>',
+      align: 'left'
+  },
+  xAxis: {
+      categories: ['Africa', 'America', 'Asia', 'Europe'],
       title: {
-        text: 'Miles de euros'
+          text: null
+      },
+      gridLineWidth: 1,
+      lineWidth: 0
+  },
+  yAxis: {
+      min: 0,
+      title: {
+          text: 'Population (millions)',
+          align: 'high'
+      },
+      labels: {
+          overflow: 'justify'
+      },
+      gridLineWidth: 0
+  },
+  tooltip: {
+      valueSuffix: ' millions'
+  },
+  plotOptions: {
+      bar: {
+          borderRadius: '50%',
+          dataLabels: {
+              enabled: true
+          },
+          groupPadding: 0.1
       }
-    },
-    series: [{
-      type: 'column',
-      name: 'Ventas',
-      data: [100, 200, 150, 300, 250, 400]
-    }]
+  },
+  legend: {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'top',
+      x: -40,
+      y: 80,
+      floating: true,
+      borderWidth: 1,
+      backgroundColor:
+          Highcharts.defaultOptions.legend!.backgroundColor || '#FFFFFF',
+      shadow: true
+  },
+  credits: {
+      enabled: false
+  },
+  series: [{
+      name: 'Year 1990',
+      data: [631, 727, 3202, 721]
+  }, {
+      name: 'Year 2000',
+      data: [814, 841, 3714, 726]
+  }, {
+      name: 'Year 2018',
+      data: [1276, 1007, 4561, 746]
+  }] as any
   };
-
-  constructor() {
-    // Asignar Highcharts a una variable
-    this.Highcharts = Highcharts;
-
-    // Inicializar el módulo de exportación
-    require('highcharts/modules/exporting')(Highcharts);
-  }
-
-  exportChart() {
-    // Obtener el objeto chart
-    let chart = this.Highcharts.chart('chart', this.chartOptions);
-
-    let exportOptions: Highcharts.ExportingOptions = {
-      sourceWidth: 800,
-      sourceHeight: 600
-    };
-
-    // Exportar el gráfico como PNG
-    chart.exportChart({
-      type: 'image/png',
-      filename: 'ventas'
-    }, exportOptions);
-  }
 }
