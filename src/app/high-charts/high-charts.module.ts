@@ -8,6 +8,7 @@ import { ChartModule } from 'angular-highcharts';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { ColumnChartComponent } from './column-chart/column-chart.component';
 import { ColumnDrilldownChartComponent } from './column-drilldown-chart/column-drilldown-chart.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ColumnDrilldownChartComponent } from './column-drilldown-chart/column-d
     LineChartComponent,
     BarChartComponent,
     ColumnChartComponent,
-    ColumnDrilldownChartComponent
+    ColumnDrilldownChartComponent,
+    PieChartComponent
   ],
   imports: [
     CommonModule,
