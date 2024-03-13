@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +20,9 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { ChartModule } from 'angular-highcharts';
 import { HighchartsChartModule } from 'highcharts-angular';
 
+import { GoogleChartsModule } from 'angular-google-charts';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -39,8 +42,11 @@ import { HighchartsChartModule } from 'highcharts-angular';
     NgxEchartsModule.forRoot({ echarts }),
     NgApexchartsModule,
     ChartModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    GoogleChartsModule.forRoot(),
+    HttpClientModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

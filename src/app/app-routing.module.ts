@@ -33,6 +33,12 @@ const routes: Routes = [
       m => m.HighChartsModule
     ) 
   },
+  {
+    path: 'google-chart',
+    loadChildren: () =>  import('./google-chart/google-chart.module').then(
+      m => m.GoogleChartModule
+    ) 
+  },
 ];
 
 @NgModule({

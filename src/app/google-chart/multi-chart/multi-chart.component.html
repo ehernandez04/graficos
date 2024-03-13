@@ -1,0 +1,35 @@
+<google-chart #chart 
+    style=" height:40vh; width:80vw"
+    [title]="'Prueba'" 
+    [type]="myType" 
+    [data]="chartData" 
+    [options]="options">
+</google-chart>
+
+
+<div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+    <button mat-raised-button (click)="changeType('LineChart')">Line Chart</button>
+
+    <button mat-raised-button (click)="changeType('BarChart')">Bar Chart</button>
+
+    <button mat-raised-button (click)="changeType('ColumnChart')">Column Chart</button>
+
+    <button mat-raised-button (click)="changeType('PieChart')">Pie Chart</button>
+
+    <button mat-raised-button (click)="changeType('3DPieChart')">3D Pie Chart</button>
+
+    <button mat-raised-button (click)="changeType('Histogram')">Histogram</button>
+
+    <button mat-raised-button (click)="changeType('Gauge')">Medidor</button>
+
+    <button mat-raised-button (click)="changeType('ComboChart')">Combinado</button>
+
+    <button mat-raised-button (click)="changeType('Table')">Tabla</button>
+
+    <button mat-raised-button (click)="changeType('AreaChart')">Area Chart</button>
+
+    <button mat-raised-button (click)="changeType('Scatter')">Dispersión</button>
+
+    <button mat-raised-button (click)="downloadAsPNG()">Descargar</button>
+
+</div>
